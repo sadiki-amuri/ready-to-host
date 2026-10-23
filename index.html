@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form · Host-Ready</title>
+   
+</head>
+<body>
+    <div class="form-card">
+        <h1>
+            <span>📝</span> Feedback form
+        </h1>
+        <div class="subhead">Tell us what you think. Your feedback helps us improve.</div>
+
+    
+            <form id="feedbackForm" name="User-Feedback" method="POST" action="/?success=true" data-netlify="true">
+
+            
+            <div class="form-group">
+                <label for="name">Full name <span class="optional">(optional)</span></label>
+                <input type="text" id="name" name="name" placeholder="e.g. Alex Anzuruni" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Your feedback</label>
+                <textarea id="comments" name="comments" placeholder="What is on your mind?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+                Submit Feedback
+            </button>
+
+            <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(145deg, #f6f9fc 0%, #eef2f7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .form-card {
+            background: #ffffff;
+            max-width: 680px;
+            width: 100%;
+            border-radius: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.02);
+            padding: 2.5rem 2.2rem 2.2rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .form-card:hover {
+            box-shadow: 0 30px 55px -14px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.03);
+        }
+    
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #0b1c2f;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.4rem;
+        }
+
+        h1 span {
+            font-size: 2.2rem;
+        }
+
+        .subhead {
+            color: #4b5e71;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            border-left: 3px solid #3b82f6;
+            padding-left: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.6rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: #1e2f3f;
+            margin-bottom: 0.45rem;
+            letter-spacing: 0.01em;
+        }
+
+        label .optional {
+            font-weight: 400;
+            color: #7a8b9b;
+            font-size: 0.85rem;
+            margin-left: 0.3rem;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            font-size: 1rem;
+            font-family: inherit;
+            background: #f9fcff;
+            border: 1.5px solid #dde5ee;
+            border-radius: 1rem;
+            transition: border 0.15s, box-shadow 0.15s, background 0.2s;
+            color: #0b1c2f;
+            outline: none;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #3b82f6;
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+        }
+
+        input:hover, select:hover, textarea:hover {
+            background: #ffffff;
+            border-color: #b8cadc;
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+            line-height: 1.5;
+        }
+
+        .btn-submit {
+            background: #0b1c2f;
+            color: #ffffff;
+            border: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 1rem 1.8rem;
+            border-radius: 2.5rem;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.15s;
+            margin-top: 1.8rem;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            border: 1px solid #1f3a5e;
+        }
+
+        .btn-submit:hover {
+            background: #132b44;
+            transform: scale(1.01);
+            box-shadow: 0 10px 20px -8px rgba(11, 28, 47, 0.3);
+        }
+
+        .btn-submit:active {
+            background: #071422;
+            transform: scale(0.99);
+        }
+        
+        @media (max-width: 550px) {
+            .form-card {
+                padding: 1.8rem 1.4rem;
+                border-radius: 1.5rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+        </form>
+    </div>
+</body>
+</html>
